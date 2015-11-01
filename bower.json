@@ -1,0 +1,8 @@
+{
+  "name": "mithril-underpants",
+  "version": "0.0.1",
+  "homepage": "https://github.com/orbitbot/mithril-underpants",
+  "description": "Quick & dirty setup for your adventures with Mithril.js",
+  "private": true,
+  "license": "ISC"
+}
