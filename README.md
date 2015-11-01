@@ -3,18 +3,13 @@
 
 http://lhorie.github.io/mithril/
 
-- intended folder structure & functionality
-
-- how to checkout
+Disclaimer: based on author's previous angularjs practices, might not be ideal for mithriljs workflow as of yet
 
 <br>
 ### Features
 
 - Gulp build system
-- 
-
-
-
+- automatic testing on file save
 
 ### How to use
 
@@ -32,27 +27,23 @@ http://lhorie.github.io/mithril/
 
       config/               <-- configuration for tests and linting, etc.
 
-      dist/                 <-- same as develop folder, but optimized for production
-          ../                   (minification etc.). files are included in version
+      dist/                 <-- same as build folder, but optimized for production
+          ../                   (minification etc.). Files are included in version
                                 control and should only be updated when releases are
                                 made
       src/
-          app/              <-- angular.js code & unit tests
-              components/     <-- individual UI components and their html, css and
-                                  controller code, as well as unit tests. If it has
-                                  a controller, it belongs here.
+          app/              <-- mithril app and unit tests
+              components/     <-- individual components and their html, less and
+                                  javascript code, as well as unit tests. If it has
               model/          <-- data and state modeling
-              services/       <-- sock drawer
-              templates/      <-- template files that do not belong under components
-              utils/          <-- directives, trivial services, reusable code
-              webrtc/         <-- interaction with browser WebRTC functionality
+              ../
 
               app.js          <-- base application module (config, routes etc.)
 
           assets/           <-- static assets
-              css/            <-- base structural (non-library) css files
-              less/
-              ../
+              less/           <-- base structural (non-library) files styling, ie.
+              ../                 layout for your pages, which component-specific
+                                  compliment and override as required
 
           index.html        <-- Compilation template file, which defines the top-level
                                 output index.html structure
@@ -74,7 +65,8 @@ Workflow commands are available using Gulp, you can list the high level selectio
     # ...
 
     build        Compile the current sources into the build/ folder
-    develop      Build and serve build/ folder, running tests and updating whenever a file is changed
+    develop      Build and serve build/ folder, running tests and
+                                updating whenever a file is changed
     eslint       Run eslint on javascript files
     help         Display this help text.
     integration  Run integration tests
@@ -90,12 +82,14 @@ Additional sub-tasks exist, see `gulpfile.js` for full functionality.
 <br>
 ### Running tests
 
-After installation (*NB.* examples depend on `gulp` being available as a global package, also for CI machine), the following commands can be used:
+After installation (*NB.* examples depend on `gulp` being available as a global package),
+the following commands can be used:
 
 - unit tests: `gulp karma`
 - integration tests: `gulp integration`
 
-Test setup configuration can be found in `config/karma.conf`, and `config/protractor.conf` in combination with `gulpfile.js`.
+Test setup configuration can be found in `config/karma.conf`, and `config/protractor.conf`
+in combination with `gulpfile.js`.
 
 <br>
 ### Colophon
@@ -108,3 +102,4 @@ Test setup configuration can be found in `config/karma.conf`, and `config/protra
 - ```mithril-underpants``` uses a Browserify-build of [mithril-query](https://github.com/StephanHoyer/mithril-query) 
   to be able to write expressive tests. Ideally this would not be required, since this requires a manual step to 
   update if the source package gets upgraded.
+- global electron install?
