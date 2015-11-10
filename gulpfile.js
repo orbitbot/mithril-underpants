@@ -4,7 +4,6 @@ var KarmaServer = require('karma').Server;
 var _           = require('lodash');
 var browserSync = require('browser-sync').create();
 var at          = require('gulp-asset-transform');
-var protractor  = require("gulp-protractor").protractor;
 
 
 var paths = {
@@ -99,7 +98,6 @@ gulp.task('less-lint', 'Run lint checks on LESS files', function() {
 // Tests
 
 gulp.task('karma', 'Run unit tests', function(done) {
-  process.env.ELECTRON_BIN = '/usr/bin/electron';
   new KarmaServer(_.assign({}, config.karma, { singleRun: true }), done).start();
 });
 
