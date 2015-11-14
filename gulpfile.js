@@ -97,8 +97,8 @@ gulp.task('less-lint', 'Run lint checks on LESS files', function() {
 
 // Tests
 
-gulp.task('karma', 'Run unit tests', function(done) {
-  new KarmaServer(_.assign({}, config.karma, { singleRun: true }), done).start();
+gulp.task('karma', 'Run unit tests', function() {
+  new KarmaServer(_.assign({}, config.karma, { singleRun: true })).start();
 });
 
 gulp.task('karma-ci', false, function() {

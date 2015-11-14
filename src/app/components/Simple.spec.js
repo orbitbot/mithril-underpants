@@ -1,3 +1,5 @@
+var mq = rRequire('mithril-query');
+
 describe('Simple Component', function() {
 
   it('has a controller', function() {

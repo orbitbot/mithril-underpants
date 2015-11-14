@@ -12,6 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "chai": "^3.4.0",
+    "electron-prebuilt": "^0.34.3",
     "gulp": "^3.9.0",
     "gulp-asset-transform": "^1.6.3",
     "gulp-concat": "^2.6.0",
@@ -31,13 +32,14 @@
     "karma": "^0.13.14",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^0.5.3",
-    "karma-electron-launcher": "orbitbot/karma-electron-launcher#next",
+    "karma-electron-launcher": "lele85/karma-electron-launcher",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.1.1",
     "karma-sinon": "^1.0.4",
     "lodash": "^3.10.1",
     "mithril": "^0.2.0",
     "mithril-query": "^0.7.6",
+    "mocha": "^2.3.3",
     "msx": "^0.4.1",
     "sinon": "^1.17.2"
   },
