@@ -34,7 +34,7 @@ Disclaimer: based on author's previous angularjs practices, might not be ideal f
       src/
           app/              <-- mithril app and unit tests
               components/     <-- individual components and their html, less and
-                                  javascript code, as well as unit tests. If it has
+                                  javascript code, as well as unit tests.
               model/          <-- data and state modeling
               ../
 
@@ -50,7 +50,7 @@ Disclaimer: based on author's previous angularjs practices, might not be ideal f
 
       test/                 <-- integration & scenario tests, test reports
           integration/        <-- E2E test specifications
-          results/            <-- test reports for CI, git exclude when set up
+          results/            <-- test reports for CI
 
       bower.json              <-- bower package management
       gulpfile.js             <-- task runner configuration
@@ -70,7 +70,7 @@ Workflow commands are available using Gulp, you can list the high level selectio
     eslint       Run eslint on javascript files
     help         Display this help text.
     integration  Run integration tests
-    karma        Run unit tests
+    unit         Run unit tests
     less-lint    Run lint checks on LESS files
     release      Compile a new release from current sources
     serve        Serve build/ folder with Browser-sync
@@ -85,11 +85,10 @@ Additional sub-tasks exist, see `gulpfile.js` for full functionality.
 After installation (*NB.* examples depend on `gulp` being available as a global package),
 the following commands can be used:
 
-- unit tests: `gulp karma`
+- unit tests: `gulp unit`
 - integration tests: `gulp integration`
 
-Test setup configuration can be found in `config/karma.conf`, and `config/protractor.conf`
-in combination with `gulpfile.js`.
+Unit test configuration can be found in `config/karma.conf` in combination with `gulpfile.js`.
 
 <br>
 ### Colophon
@@ -97,9 +96,6 @@ in combination with `gulpfile.js`.
 - the example source code was mostly adapted from [mithril-query](https://github.com/StephanHoyer/mithril-query)
 
 <br>
-### Notes
+### License
 
-- ```mithril-underpants``` uses a Browserify-build of [mithril-query](https://github.com/StephanHoyer/mithril-query) 
-  to be able to write expressive tests. Ideally this would not be required, since this requires a manual step to 
-  update if the source package gets upgraded.
-- global electron install?
+ISC - please share your workflow improvements though.
