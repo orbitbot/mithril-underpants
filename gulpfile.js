@@ -11,7 +11,7 @@ var paths = {
   less        : ['src/assets/less/*.less', 'src/app/**/*.less'],
   images      : 'src/assets/images/**',
   index       : 'src/index.html',
-  js          : 'src/app/**/*.js',
+  js          : 'src/app/**/*.js?(x)',
 };
 
 var config = {
