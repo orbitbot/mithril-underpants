@@ -1,8 +1,5 @@
-// this helper exposes require inside mocha tests run with karma
-global = window.parent;
-process = window.process || window.parent.process;
-require = window.require || window.parent.require;
-
-// create shorthand for loading node modules in renderer process
-// TODO: this should work by default...
-rRequire = require('remote').require;
+// this shim exposes node globals inside karma runs
+window.require = window.top.require;
+window.process = window.top.process;
+window.__dirname = window.top.__dirname;
+require("module").globalPaths.push("./node_modules");

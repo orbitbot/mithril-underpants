@@ -1,4 +1,4 @@
-var mq = rRequire('mithril-query');
+var mq = require('mithril-query');
 
 describe('Simple Component', function() {
 
